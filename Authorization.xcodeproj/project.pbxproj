@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		FA0520A82612D1C1000717DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0520A72612D1C1000717DC /* AppDelegate.swift */; };
 		FA0520AA2612D1C1000717DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0520A92612D1C1000717DC /* SceneDelegate.swift */; };
-		FA0520AC2612D1C1000717DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0520AB2612D1C1000717DC /* ViewController.swift */; };
 		FA0520AF2612D1C1000717DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0520AD2612D1C1000717DC /* Main.storyboard */; };
 		FA0520B12612D1C3000717DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0520B02612D1C3000717DC /* Assets.xcassets */; };
 		FA0520B42612D1C3000717DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */; };
+		FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0520BD2612D27A000717DC /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA0520A42612D1C1000717DC /* Authorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0520A72612D1C1000717DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA0520A92612D1C1000717DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA0520AB2612D1C1000717DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA0520AE2612D1C1000717DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA0520B02612D1C3000717DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA0520B32612D1C3000717DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0520B52612D1C3000717DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0520BD2612D27A000717DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			children = (
 				FA0520A72612D1C1000717DC /* AppDelegate.swift */,
 				FA0520A92612D1C1000717DC /* SceneDelegate.swift */,
-				FA0520AB2612D1C1000717DC /* ViewController.swift */,
+				FA0520BD2612D27A000717DC /* LoginViewController.swift */,
 				FA0520AD2612D1C1000717DC /* Main.storyboard */,
 				FA0520B02612D1C3000717DC /* Assets.xcassets */,
 				FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0520AC2612D1C1000717DC /* ViewController.swift in Sources */,
+				FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */,
 				FA0520A82612D1C1000717DC /* AppDelegate.swift in Sources */,
 				FA0520AA2612D1C1000717DC /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +296,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ArtemBazhanov.Authorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +315,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ArtemBazhanov.Authorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
