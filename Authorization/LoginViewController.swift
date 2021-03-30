@@ -29,11 +29,11 @@ class LoginViewController: UIViewController {
         logInButton.layer.borderWidth = 1
         logInButton.layer.cornerRadius = 15
         logInButton.layer.borderColor = textColor.cgColor
-        
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
