@@ -32,9 +32,13 @@ class LoginViewController: UIViewController {
         
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         checkLoginPassword()
-    
+
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.userName = loginTF.text
@@ -71,7 +75,6 @@ class LoginViewController: UIViewController {
     }
 }
 
-// MARK: - Private Methods
 extension LoginViewController {
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -79,6 +82,7 @@ extension LoginViewController {
             self.passwordTF.text = ""
         }
         alert.addAction(okAction)
+        alert.view.tintColor = textColor
         present(alert, animated: true)
     }
 }

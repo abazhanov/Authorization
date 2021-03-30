@@ -16,4 +16,8 @@ class WelcomeViewController: UIViewController {
         guard let userNameString = userName else { return }
         userNameTF.text = "Добро пожаловать, \(userNameString)"
     }
+    
+    @IBAction func cancelAction() {
+        dismiss(animated: true)
+    }
 }

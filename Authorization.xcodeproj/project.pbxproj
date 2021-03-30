@@ -14,6 +14,8 @@
 		FA0520B42612D1C3000717DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */; };
 		FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0520BD2612D27A000717DC /* LoginViewController.swift */; };
 		FA70818F2613799600BDEE01 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70818E2613799600BDEE01 /* WelcomeViewController.swift */; };
+		FA7081942613AEAB00BDEE01 /* closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7081932613AEAB00BDEE01 /* closeButton.png */; };
+		FA7081972613AF1100BDEE01 /* closeButton1x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7081962613AF1100BDEE01 /* closeButton1x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FA0520B52612D1C3000717DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0520BD2612D27A000717DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA70818E2613799600BDEE01 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FA7081932613AEAB00BDEE01 /* closeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeButton.png; sourceTree = "<group>"; };
+		FA7081962613AF1100BDEE01 /* closeButton1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeButton1x.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				FA0520BD2612D27A000717DC /* LoginViewController.swift */,
 				FA0520AD2612D1C1000717DC /* Main.storyboard */,
 				FA70818E2613799600BDEE01 /* WelcomeViewController.swift */,
+				FA7081962613AF1100BDEE01 /* closeButton1x.png */,
+				FA7081932613AEAB00BDEE01 /* closeButton.png */,
 				FA0520B02612D1C3000717DC /* Assets.xcassets */,
 				FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */,
 				FA0520B52612D1C3000717DC /* Info.plist */,
@@ -127,6 +133,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7081942613AEAB00BDEE01 /* closeButton.png in Resources */,
+				FA7081972613AF1100BDEE01 /* closeButton1x.png in Resources */,
 				FA0520B42612D1C3000717DC /* LaunchScreen.storyboard in Resources */,
 				FA0520B12612D1C3000717DC /* Assets.xcassets in Resources */,
 				FA0520AF2612D1C1000717DC /* Main.storyboard in Resources */,

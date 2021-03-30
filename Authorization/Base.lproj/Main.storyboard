@@ -140,6 +140,13 @@
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wk-ra-g60">
+                                <rect key="frame" x="356" y="16" width="42" height="42"/>
+                                <state key="normal" backgroundImage="closeButton1x.png"/>
+                                <connections>
+                                    <action selector="cancelAction" destination="f0z-Ez-Qsh" eventType="touchUpInside" id="4aE-7C-WDH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TKH-ky-VDt"/>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.94117647059999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -147,8 +154,10 @@
                             <constraint firstItem="AdA-3M-OKf" firstAttribute="centerY" secondItem="VOI-lW-tEo" secondAttribute="centerY" id="5Zk-pE-3lT"/>
                             <constraint firstItem="AdA-3M-OKf" firstAttribute="centerX" secondItem="VOI-lW-tEo" secondAttribute="centerX" id="F9K-P8-9uZ"/>
                             <constraint firstItem="ahC-Qs-Egm" firstAttribute="top" secondItem="TKH-ky-VDt" secondAttribute="top" constant="150" id="MFA-TL-Kco"/>
+                            <constraint firstItem="1Wk-ra-g60" firstAttribute="top" secondItem="TKH-ky-VDt" secondAttribute="top" constant="16" id="Me8-tT-1i4"/>
                             <constraint firstItem="ahC-Qs-Egm" firstAttribute="centerX" secondItem="VOI-lW-tEo" secondAttribute="centerX" id="RNB-3u-FLo"/>
                             <constraint firstItem="ahC-Qs-Egm" firstAttribute="leading" secondItem="TKH-ky-VDt" secondAttribute="leading" constant="16" id="bVF-YH-wyG"/>
+                            <constraint firstItem="TKH-ky-VDt" firstAttribute="trailing" secondItem="1Wk-ra-g60" secondAttribute="trailing" constant="16" id="klj-iw-Wxu"/>
                             <constraint firstItem="TKH-ky-VDt" firstAttribute="trailing" secondItem="ahC-Qs-Egm" secondAttribute="trailing" constant="16" id="nZ0-cy-2VM"/>
                         </constraints>
                     </view>
@@ -186,4 +195,7 @@
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="closeButton1x.png" width="42" height="42"/>
+    </resources>
 </document>
