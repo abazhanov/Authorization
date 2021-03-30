@@ -13,6 +13,7 @@
 		FA0520B12612D1C3000717DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0520B02612D1C3000717DC /* Assets.xcassets */; };
 		FA0520B42612D1C3000717DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */; };
 		FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0520BD2612D27A000717DC /* LoginViewController.swift */; };
+		FA70818F2613799600BDEE01 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70818E2613799600BDEE01 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA0520B32612D1C3000717DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0520B52612D1C3000717DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0520BD2612D27A000717DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA70818E2613799600BDEE01 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				FA0520A92612D1C1000717DC /* SceneDelegate.swift */,
 				FA0520BD2612D27A000717DC /* LoginViewController.swift */,
 				FA0520AD2612D1C1000717DC /* Main.storyboard */,
+				FA70818E2613799600BDEE01 /* WelcomeViewController.swift */,
 				FA0520B02612D1C3000717DC /* Assets.xcassets */,
 				FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */,
 				FA0520B52612D1C3000717DC /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */,
+				FA70818F2613799600BDEE01 /* WelcomeViewController.swift in Sources */,
 				FA0520A82612D1C1000717DC /* AppDelegate.swift in Sources */,
 				FA0520AA2612D1C1000717DC /* SceneDelegate.swift in Sources */,
 			);

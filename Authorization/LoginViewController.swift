@@ -8,7 +8,13 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var loginTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+ 
     @IBOutlet weak var logInButton: UIButton!
+    
+    private let userLogin = "User"
+    private let userPassword = "Password"
     
     let textColor = UIColor(
         red: 34.0/255.0,
@@ -26,5 +32,53 @@ class LoginViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        checkLoginPassword()
+    
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.modalPresentationStyle = .fullScreen
+        welcomeVC.userName = loginTF.text
+    }
 
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        loginTF.text = ""
+        passwordTF.text = ""
+    }
+    
+    @IBAction func forgotLoginAction() {
+        showAlert(with: "You login is: User", and: "")
+    }
+    
+    @IBAction func forgotPasswordAction() {
+        showAlert(with: "You password is: Password", and: "")
+    }
+    
+    private func checkLoginPassword() {
+        guard let inputLogin = loginTF.text, !inputLogin.isEmpty else {
+            showAlert(with: "Login field is empty", and: "Please enter your Login")
+            return
+        }
+        guard let inputPassword = passwordTF.text, !inputPassword.isEmpty else {
+            showAlert(with: "Password field is empty", and: "Please enter your Password")
+            return
+        }
+        
+        if loginTF.text != userLogin {
+            showAlert(with: "Login is wrong", and: "Please enter valid Login")
+        } else if passwordTF.text != userPassword {
+            showAlert(with: "Password is wrong", and: "Please enter valid Password")
+        }
+    }
+}
+
+// MARK: - Private Methods
+extension LoginViewController {
+    private func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordTF.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
