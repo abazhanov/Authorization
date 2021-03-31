@@ -8,13 +8,13 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-    @IBOutlet weak var userNameTF: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
     var userName: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let userNameString = userName else { return }
-        userNameTF.text = "Добро пожаловать, \(userNameString)"
+        userNameLabel.text = "Добро пожаловать, \(userNameString)"
     }
     
     @IBAction func cancelAction() {

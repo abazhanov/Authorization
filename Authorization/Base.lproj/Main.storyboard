@@ -65,7 +65,7 @@
                                     <color key="titleColor" red="0.1333333333" green="0.65490196079999996" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="f0z-Ez-Qsh" kind="presentation" id="5GE-bI-kSn"/>
+                                    <segue destination="f0z-Ez-Qsh" kind="presentation" identifier="segueWelcomeScreen" id="5GE-bI-kSn"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mhd-np-uqI">
@@ -163,7 +163,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="F0k-ON-cHn"/>
                     <connections>
-                        <outlet property="userNameTF" destination="ahC-Qs-Egm" id="Rdm-tm-sxI"/>
+                        <outlet property="userNameLabel" destination="ahC-Qs-Egm" id="Rdm-tm-sxI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pa6-K6-aij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

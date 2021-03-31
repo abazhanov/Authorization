@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
  
@@ -22,13 +22,17 @@ class LoginViewController: UIViewController {
         blue: 197.0/255.0,
         alpha: 1)
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
             
         logInButton.layer.borderWidth = 1
         logInButton.layer.cornerRadius = 15
         logInButton.layer.borderColor = textColor.cgColor
+        
+        loginTF.delegate = self
+        loginTF.returnKeyType = .next
+        passwordTF.delegate = self
+        passwordTF.returnKeyType = .done
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -54,6 +58,16 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPasswordAction() {
         showAlert(with: "You password is: Password", and: "")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if (textField == self.loginTF) {
+            textField.resignFirstResponder()
+            self.passwordTF.becomeFirstResponder()
+        } else {
+            performSegue(withIdentifier: "segueWelcomeScreen", sender: nil)
+        }
+        return true
     }
     
     private func checkLoginPassword() {
