@@ -38,7 +38,6 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         checkLoginPassword()
-
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.userName = loginTF.text
