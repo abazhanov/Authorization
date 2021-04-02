@@ -66,8 +66,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if (textField == self.loginTF) {
-            textField.resignFirstResponder()
-            self.passwordTF.becomeFirstResponder()
+            //textField.resignFirstResponder()
+            passwordTF.becomeFirstResponder()
         } else {
             performSegue(withIdentifier: "segueWelcomeScreen", sender: nil)
         }
@@ -85,10 +85,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         if loginTF.text != userLogin {
-            showAlert(with: "Login is wrong", and: "Please enter valid Login")
+            showAlert(with: "Login or password is wrong", and: "Please enter valid")
             return false
         } else if passwordTF.text != userPassword {
-            showAlert(with: "Password is wrong", and: "Please enter valid Password")
+            showAlert(with: "Password or password is wrong", and: "Please enter valid")
             return false
         }
         return true
