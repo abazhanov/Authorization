@@ -65,7 +65,8 @@
                                             <color key="titleColor" red="0.1333333333" green="0.65490196079999996" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <segue destination="f0z-Ez-Qsh" kind="presentation" identifier="segueWelcomeScreen" id="5GE-bI-kSn"/>
+                                            <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="UKh-No-DrI"/>
+                                            <segue destination="f0z-Ez-Qsh" kind="presentation" identifier="segueWelcomeScreen" modalPresentationStyle="fullScreen" id="5GE-bI-kSn"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mhd-np-uqI">
@@ -118,7 +119,7 @@
             <objects>
                 <viewController id="f0z-Ez-Qsh" customClass="WelcomeViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VOI-lW-tEo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wk-ra-g60">
@@ -129,7 +130,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="6Ku-0H-g5C">
-                                <rect key="frame" x="16" y="211.5" width="288" height="125"/>
+                                <rect key="frame" x="16" y="221.5" width="288" height="125"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-Qs-Egm">
                                         <rect key="frame" x="28.5" y="0.0" width="231" height="24"/>

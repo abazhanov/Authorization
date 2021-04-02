@@ -41,15 +41,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        checkLoginPassword()
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.modalPresentationStyle = .fullScreen
         welcomeVC.userName = loginTF.text
     }
 
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         loginTF.text = ""
         passwordTF.text = ""
+    }
+    
+    @IBAction func logInPressed() {
+        if !checkLoginPassword() {
+            return
+        }
     }
     
     @IBAction func forgotLoginAction() {
@@ -70,21 +74,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    private func checkLoginPassword() {
+    private func checkLoginPassword() -> Bool {
         guard let inputLogin = loginTF.text, !inputLogin.isEmpty else {
             showAlert(with: "Login field is empty", and: "Please enter your Login")
-            return
+            return false
         }
         guard let inputPassword = passwordTF.text, !inputPassword.isEmpty else {
             showAlert(with: "Password field is empty", and: "Please enter your Password")
-            return
+            return false
         }
         
         if loginTF.text != userLogin {
             showAlert(with: "Login is wrong", and: "Please enter valid Login")
+            return false
         } else if passwordTF.text != userPassword {
             showAlert(with: "Password is wrong", and: "Please enter valid Password")
+            return false
         }
+        return true
     }
 }
 
