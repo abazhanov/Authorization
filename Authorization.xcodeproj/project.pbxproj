@@ -14,6 +14,7 @@
 		FA0520B42612D1C3000717DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */; };
 		FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0520BD2612D27A000717DC /* LoginViewController.swift */; };
 		FA70818F2613799600BDEE01 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70818E2613799600BDEE01 /* WelcomeViewController.swift */; };
+		FA860FDF2617A1D900C5A587 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860FDE2617A1D900C5A587 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FA0520B52612D1C3000717DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0520BD2612D27A000717DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FA70818E2613799600BDEE01 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		FA860FDE2617A1D900C5A587 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		FA0520A62612D1C1000717DC /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				FA0520A72612D1C1000717DC /* AppDelegate.swift */,
-				FA0520A92612D1C1000717DC /* SceneDelegate.swift */,
-				FA0520BD2612D27A000717DC /* LoginViewController.swift */,
-				FA0520AD2612D1C1000717DC /* Main.storyboard */,
-				FA70818E2613799600BDEE01 /* WelcomeViewController.swift */,
-				FA0520B02612D1C3000717DC /* Assets.xcassets */,
-				FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */,
-				FA0520B52612D1C3000717DC /* Info.plist */,
+				FA860FDD2617A1C500C5A587 /* Models */,
+				FA860FDA2617A14600C5A587 /* Supporting */,
+				FA860FD62617A0A800C5A587 /* ViewControllers */,
+				FA860FD82617A0D800C5A587 /* Storyboards */,
+				FA860FD92617A11A00C5A587 /* Resources */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		FA860FD62617A0A800C5A587 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA0520BD2612D27A000717DC /* LoginViewController.swift */,
+				FA70818E2613799600BDEE01 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA860FD82617A0D800C5A587 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FA0520AD2612D1C1000717DC /* Main.storyboard */,
+				FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA860FD92617A11A00C5A587 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA0520B02612D1C3000717DC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA860FDA2617A14600C5A587 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				FA0520A72612D1C1000717DC /* AppDelegate.swift */,
+				FA0520A92612D1C1000717DC /* SceneDelegate.swift */,
+				FA0520B52612D1C3000717DC /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		FA860FDD2617A1C500C5A587 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA860FDE2617A1D900C5A587 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +186,7 @@
 				FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */,
 				FA70818F2613799600BDEE01 /* WelcomeViewController.swift in Sources */,
 				FA0520A82612D1C1000717DC /* AppDelegate.swift in Sources */,
+				FA860FDF2617A1D900C5A587 /* User.swift in Sources */,
 				FA0520AA2612D1C1000717DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R242LK7DMS;
-				INFOPLIST_FILE = Authorization/Info.plist;
+				INFOPLIST_FILE = Authorization/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,7 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R242LK7DMS;
-				INFOPLIST_FILE = Authorization/Info.plist;
+				INFOPLIST_FILE = Authorization/Supporting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
