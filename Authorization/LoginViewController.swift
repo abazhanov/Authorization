@@ -16,7 +16,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     private let userLogin = "User"
     private let userPassword = "Password"
     
-    let textColor = UIColor(
+    private let textColor = UIColor(
         red: 34.0/255.0,
         green: 167.0/255.0,
         blue: 197.0/255.0,
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
