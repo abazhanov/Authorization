@@ -13,8 +13,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
  
     @IBOutlet weak var logInButton: UIButton!
     
-    private let userLogin = "User"
-    private let userPassword = "Password"
+    //private let userLogin = "User"
+    //private let userPassword = "Password"
     
     private let textColor = UIColor(
         red: 34.0/255.0,
@@ -41,8 +41,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = loginTF.text
+        let currentUserModel = sender as? User
+        //print(currentUserModel)
+        //guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        //welcomeVC.userName = loginTF.text
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        //print(tabBarController.viewControllers?.count)
+        for viewController in tabBarController.viewControllers! {
+            print("viewController: \(viewController)")
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userModels = User.getUsers()
+                welcomeVC.userName = loginTF.text
+            }
+            if let aboutMeVC = viewController as? AboutMeViewController {
+                aboutMeVC.currentUserModel = currentUserModel
+            } else if let navigationVC = viewController as? UINavigationController {
+                let hobVC = navigationVC.topViewController as! HobViewController
+                hobVC.currentUserModel = currentUserModel
+            }
+        }
     }
 
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -51,9 +68,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func logInPressed() {
-        if !checkLoginPassword() {
-            return
+        let usersModels = User.getUsers()
+        var currentUserModel: User
+        
+        guard let userLogin = loginTF.text else { return }
+        guard let userPassword = passwordTF.text else { return }
+        
+        if checkLoginPassword() {
+            for user in usersModels {
+                //print("user in for = \(user)")
+                print("user.login: \(user.login)")
+                print("user.password: \(user.password)")
+                if user.login == userLogin && user.password == userPassword {
+                    currentUserModel = user
+                    performSegue(withIdentifier: "segueWelcomeScreen", sender: currentUserModel)
+                }
+            }
         }
+        showAlert(with: "Login or password is wrong", and: "Please enter valid")
+        return
     }
     
     @IBAction func forgotLoginAction() {
@@ -69,7 +102,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             //textField.resignFirstResponder()
             passwordTF.becomeFirstResponder()
         } else {
-            performSegue(withIdentifier: "segueWelcomeScreen", sender: nil)
+            logInPressed()
+            //performSegue(withIdentifier: "segueWelcomeScreen", sender: nil)
         }
         return true
     }
@@ -84,13 +118,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return false
         }
         
-        if loginTF.text != userLogin {
-            showAlert(with: "Login or password is wrong", and: "Please enter valid")
-            return false
-        } else if passwordTF.text != userPassword {
-            showAlert(with: "Password or password is wrong", and: "Please enter valid")
-            return false
-        }
+//        if loginTF.text != userLogin {
+//            showAlert(with: "Login or password is wrong", and: "Please enter valid")
+//            return false
+//        } else if passwordTF.text != userPassword {
+//            showAlert(with: "Password or password is wrong", and: "Please enter valid")
+//            return false
+//        }
+        
+        
         return true
     }
 }

@@ -13,8 +13,12 @@
 		FA0520B12612D1C3000717DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0520B02612D1C3000717DC /* Assets.xcassets */; };
 		FA0520B42612D1C3000717DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0520B22612D1C3000717DC /* LaunchScreen.storyboard */; };
 		FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0520BD2612D27A000717DC /* LoginViewController.swift */; };
+		FA474A40261A371800CE65D1 /* HobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA474A3F261A371800CE65D1 /* HobViewController.swift */; };
+		FA474A43261A471E00CE65D1 /* HobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA474A42261A471E00CE65D1 /* HobTableViewCell.swift */; };
+		FA474A46261A4BC500CE65D1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA474A45261A4BC500CE65D1 /* PhotoViewController.swift */; };
 		FA70818F2613799600BDEE01 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70818E2613799600BDEE01 /* WelcomeViewController.swift */; };
 		FA860FDF2617A1D900C5A587 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860FDE2617A1D900C5A587 /* User.swift */; };
+		FA860FE62619BE8F00C5A587 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860FE52619BE8F00C5A587 /* AboutMeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +30,12 @@
 		FA0520B32612D1C3000717DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA0520B52612D1C3000717DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA0520BD2612D27A000717DC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA474A3F261A371800CE65D1 /* HobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobViewController.swift; sourceTree = "<group>"; };
+		FA474A42261A471E00CE65D1 /* HobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobTableViewCell.swift; sourceTree = "<group>"; };
+		FA474A45261A4BC500CE65D1 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		FA70818E2613799600BDEE01 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FA860FDE2617A1D900C5A587 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA860FE52619BE8F00C5A587 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,10 @@
 			children = (
 				FA0520BD2612D27A000717DC /* LoginViewController.swift */,
 				FA70818E2613799600BDEE01 /* WelcomeViewController.swift */,
+				FA860FE52619BE8F00C5A587 /* AboutMeViewController.swift */,
+				FA474A3F261A371800CE65D1 /* HobViewController.swift */,
+				FA474A42261A471E00CE65D1 /* HobTableViewCell.swift */,
+				FA474A45261A4BC500CE65D1 /* PhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,10 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA474A40261A371800CE65D1 /* HobViewController.swift in Sources */,
 				FA0520BE2612D27A000717DC /* LoginViewController.swift in Sources */,
 				FA70818F2613799600BDEE01 /* WelcomeViewController.swift in Sources */,
 				FA0520A82612D1C1000717DC /* AppDelegate.swift in Sources */,
 				FA860FDF2617A1D900C5A587 /* User.swift in Sources */,
+				FA474A46261A4BC500CE65D1 /* PhotoViewController.swift in Sources */,
+				FA474A43261A471E00CE65D1 /* HobTableViewCell.swift in Sources */,
+				FA860FE62619BE8F00C5A587 /* AboutMeViewController.swift in Sources */,
 				FA0520AA2612D1C1000717DC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
