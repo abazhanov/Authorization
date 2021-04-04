@@ -10,18 +10,11 @@ import UIKit
 class WelcomeViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     
-    var userName: String!
-    var userModels: [User]!
+    var currentUserModel: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let userNameString = userName else { return }
-        
-        for User in userModels {
-            if User.login == userNameString {
-                userNameLabel.text = "Добро пожаловать, \(userNameString)"
-            }
-        }
+        userNameLabel.text = "Добро пожаловать, \(currentUserModel.name)"
     }
     
     @IBAction func cancelAction() {

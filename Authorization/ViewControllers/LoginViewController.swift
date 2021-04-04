@@ -47,8 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         for viewController in tabBarController.viewControllers! {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userModels = User.getUsers()
-                welcomeVC.userName = loginTF.text
+                welcomeVC.currentUserModel = currentUserModel
             }
             if let aboutMeVC = viewController as? AboutMeViewController {
                 aboutMeVC.currentUserModel = currentUserModel
