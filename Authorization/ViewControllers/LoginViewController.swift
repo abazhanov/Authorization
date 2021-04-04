@@ -42,13 +42,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let currentUserModel = sender as? User
-        //print(currentUserModel)
-        //guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        //welcomeVC.userName = loginTF.text
+        
         guard let tabBarController = segue.destination as? UITabBarController else { return }
-        //print(tabBarController.viewControllers?.count)
+        
         for viewController in tabBarController.viewControllers! {
-            print("viewController: \(viewController)")
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userModels = User.getUsers()
                 welcomeVC.userName = loginTF.text
@@ -76,9 +73,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if checkLoginPassword() {
             for user in usersModels {
-                //print("user in for = \(user)")
-                print("user.login: \(user.login)")
-                print("user.password: \(user.password)")
                 if user.login == userLogin && user.password == userPassword {
                     currentUserModel = user
                     performSegue(withIdentifier: "segueWelcomeScreen", sender: currentUserModel)
@@ -99,11 +93,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if (textField == self.loginTF) {
-            //textField.resignFirstResponder()
             passwordTF.becomeFirstResponder()
         } else {
             logInPressed()
-            //performSegue(withIdentifier: "segueWelcomeScreen", sender: nil)
         }
         return true
     }
@@ -117,16 +109,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             showAlert(with: "Password field is empty", and: "Please enter your Password")
             return false
         }
-        
-//        if loginTF.text != userLogin {
-//            showAlert(with: "Login or password is wrong", and: "Please enter valid")
-//            return false
-//        } else if passwordTF.text != userPassword {
-//            showAlert(with: "Password or password is wrong", and: "Please enter valid")
-//            return false
-//        }
-        
-        
         return true
     }
 }

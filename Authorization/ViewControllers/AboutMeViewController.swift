@@ -13,7 +13,6 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     
-    //var userName: String!
     var currentUserModel: User!
     
     override func viewDidLoad() {

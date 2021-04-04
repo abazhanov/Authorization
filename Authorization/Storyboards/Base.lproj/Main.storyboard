@@ -170,7 +170,7 @@
                             <constraint firstItem="6Ku-0H-g5C" firstAttribute="leading" secondItem="TKH-ky-VDt" secondAttribute="leading" constant="16" id="rwy-MO-NZP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Log Out" id="VbO-9y-bIB"/>
+                    <tabBarItem key="tabBarItem" title="Log Out" image="escape" catalog="system" selectedImage="escape" id="VbO-9y-bIB"/>
                     <navigationItem key="navigationItem" title="Welcome" id="F0k-ON-cHn"/>
                     <connections>
                         <outlet property="userNameLabel" destination="ahC-Qs-Egm" id="Rdm-tm-sxI"/>
@@ -254,7 +254,9 @@
                             <constraint firstItem="Ixp-WE-Wkq" firstAttribute="top" secondItem="vNB-4U-yvx" secondAttribute="bottom" constant="16" id="oVD-qt-XfF"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About me" id="xu8-dX-Mwt"/>
+                    <tabBarItem key="tabBarItem" title="About me" image="person.circle" catalog="system" selectedImage="person.circle" id="xu8-dX-Mwt">
+                        <color key="badgeColor" red="0.1333333333" green="0.65490196079999996" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="ageLabel" destination="sGq-xV-cJW" id="yrC-3P-uBY"/>
                         <outlet property="fioLabel" destination="gJl-4Q-WRP" id="ZhS-jE-OPQ"/>
@@ -397,6 +399,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.1333333333" green="0.65490196079999996" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="f0z-Ez-Qsh" kind="relationship" relationship="viewControllers" id="9bX-jT-oBo"/>
@@ -412,11 +415,12 @@
         <scene sceneID="Cir-le-bbI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4wG-FH-Dzd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Hobby" id="AZh-cT-A64"/>
+                    <tabBarItem key="tabBarItem" title="Hobby" image="star.circle" catalog="system" selectedImage="star.circle" id="AZh-cT-A64"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Q7o-Kh-XuL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.1333333333" green="0.65490196079999996" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" red="0.1333333333" green="0.65490196079999996" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </textAttributes>
@@ -433,6 +437,9 @@
     </scenes>
     <resources>
         <image name="closeButton" width="41.5" height="41.5"/>
+        <image name="escape" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="star.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

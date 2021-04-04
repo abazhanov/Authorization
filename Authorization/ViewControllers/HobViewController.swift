@@ -11,10 +11,6 @@ class HobViewController: UIViewController, UITableViewDataSource, UITableViewDel
 
     var currentUserModel: User!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let photoVC = segue.destination as? PhotoViewController else { return }
         photoVC.currentUserModel = currentUserModel
@@ -27,16 +23,9 @@ class HobViewController: UIViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellHobby") as! HobTableViewCell
         
-        //cell?.textLabel?.text = currentUserModel.hobbi[indexPath.row].title
         cell.titleCell.text = currentUserModel.hobbi[indexPath.row].title
         cell.subtitleCell.text = currentUserModel.hobbi[indexPath.row].description
         
-        
-        //print(indexPath)
-        
-        print(indexPath.row)
         return cell
     }
-
-
 }
