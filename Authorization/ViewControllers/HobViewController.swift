@@ -16,13 +16,8 @@ class HobViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let currentUserModel = sender as? User
-        
         guard let photoVC = segue.destination as? PhotoViewController else { return }
         photoVC.currentUserModel = currentUserModel
-        //let photoVC = viewController as? PhotoViewController
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

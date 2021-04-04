@@ -326,7 +326,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Photo" id="cGu-Ej-Twb">
                             <color key="tintColor" red="0.1333333333" green="0.65490196079999996" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="jDE-D4-ddm" kind="presentation" identifier="seguePhoto" id="npl-n6-z0g"/>
+                                <segue destination="jDE-D4-ddm" kind="show" id="fCW-GT-Ih5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -340,11 +340,11 @@
             <objects>
                 <viewController id="jDE-D4-ddm" customClass="PhotoViewController" customModule="Authorization" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VXd-Hq-Jdx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wvJ-Mv-Quz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="522"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R5M-kC-NDM"/>
@@ -356,6 +356,7 @@
                             <constraint firstItem="wvJ-Mv-Quz" firstAttribute="leading" secondItem="R5M-kC-NDM" secondAttribute="leading" id="qtQ-HS-NTi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Y83-ru-eur"/>
                     <connections>
                         <outlet property="photoImageView" destination="wvJ-Mv-Quz" id="xAU-8g-801"/>
                     </connections>
